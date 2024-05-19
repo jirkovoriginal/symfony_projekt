@@ -1,0 +1,14 @@
+    {% extends 'base.html.twig' %}
+    {% block body %}
+        {% include 'components/public/header.html.twig' %}
+
+        <main>
+            <div class="obsah vycentrovat">
+                <div class="kontakt">
+                    <h1>Kontakt</h1>
+                    {{ form(contact_form) }}
+                </div>
+            </div>
+        </main>
+        {% include 'components/public/footer.html.twig' %}
+    {% endblock %}

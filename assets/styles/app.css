@@ -1,0 +1,404 @@
+:root{
+    --zakladni-velikost-pisma: 16px;
+    --druh-pisma: "Inter", sans-serif;
+    --pozadi-aplikace: #F4F4F4;
+    --pozadi-navigace: rgba(0,0,0,0.9);
+    --pozadi-zapati: #212121;
+    --pozadi-elementu: #FFFFFF;
+    --pozadi-tlacitek: #000000;
+    --pozadi-tlacitek-seda: #575757;
+    --pozadi-uspech: #337D19;
+    --pozadi-chyba: #8A1C1C;
+    --pozadí-chyba-podbarveni: #db7474;
+    --barva-pisma-primarni: #000000;
+    --barva-pisma-sekundarni: #FFFFFF;
+    --barva-pisma-tercialni: #6F6F6F;
+    --vrzeny-stin: rgba(0,0,0,0.2);
+    --ramecek-vstupy: #343434;
+    --sirka-stranky: 60rem;
+    --sirka-prispevku: 55rem;
+    --sirka-nahledu: 10rem;
+    --vyska-navigace: 6.25rem;
+    --mezera-xs: 0.875rem;
+    --mezera-s: 1rem;
+    --mezera-m: 1.25rem;
+    --mezera-l: 1.875rem;
+    --mezera-xl: 2.5rem;
+    --mezera-xxl: 3.75rem;
+    --mezera-1: 0.25rem;
+    --mezera-2: 0.5rem;
+    --mezera-3: 0.75rem;
+    --mezera-4: 1rem;
+    --mezera-5: 1.25rem;
+    --mezera-6: 1.5rem;
+    --mezera-7: 1.75rem;
+    --mezera-8: 2rem;
+    --mezera-9: 2.25rem;
+    --mezera-10: 2.5rem;
+    --mezera-11: 2.75rem;
+    --mezera-12: 3rem;
+    --mezera-13: 3.25rem;
+    --mezera-14: 3.5rem;
+    --mezera-15: 3.75rem;
+    --mezera-16: 4rem;
+    --pismo-1: 0.25rem;
+    --pismo-2: 0.5rem;
+    --pismo-3: 0.75rem;
+    --pismo-4: 1rem;
+    --pismo-5: 1.25rem;
+    --pismo-6: 1.5rem;
+    --pismo-7: 1.75rem;
+    --pismo-8: 2rem;
+    --pismo-9: 2.25rem;
+    --pismo-10: 2.5rem;
+    --pismo-11: 2.75rem;
+    --pismo-12: 3rem;
+}
+
+html{
+    font-size: var(--zakladni-velikost-pisma);
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--druh-pisma);
+    background-color: var(--pozadi-aplikace);
+    font-size: var(--pismo-5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body, input, button {
+    font-family: var(--druh-pisma);
+    font-size: var(--pismo-5);
+}
+
+
+img {
+    max-width: 100%;
+}
+
+nav{
+    align-items: center;
+    width: 100%;
+    height: var(--vyska-navigace);
+    background-color: var(--pozadi-navigace);
+    position: sticky;
+    top: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+a.menu {
+    height: var(--vyska-navigace);
+    font-size: var(--pismo-12);
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--barva-pisma-sekundarni);
+	display: flex;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition-property: background;
+	transition-property: background;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+a.menu:hover:not(.active) {
+	background-color: #AA0B0B;
+}
+
+a.menu:hover.active {
+	background-color: #AA0B0B;
+}
+
+.active {
+	background-color: #332162;
+}
+
+.odkazy {
+    display: flex;
+    gap: var(--mezera-4);
+    align-items: center;
+    height: var(--vyska-navigace);
+}
+
+.odkazy a {
+    font-size: var(--pismo-8);
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--barva-pisma-sekundarni);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.odkazy_paticka {
+    display: flex;
+    gap: var(--mezera-4);
+    margin: var(--mezera-5);
+    align-items: center;
+    height: var(--mezera-12);
+    justify-content: flex-end;
+}
+
+footer>p {
+    text-align: end;
+    margin-right: var(--mezera-8);
+}
+
+.odkazy_paticka a{
+    display: block;
+    padding: var(--mezera-2);
+    text-decoration: underline;
+    color: var(--barva-pisma-primarni);
+}
+
+.formular, #formular>form{
+    width: 50%;
+    margin: 0% 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formular_data, #formular>form>div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.popisek{
+    width: 20%;
+    display: block;
+    text-align: center;
+}
+
+.kontakt{
+    width: 70%;
+    margin: 0% 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+#update_password>div, #contact>div{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#update_password>div>label, #formular>form>div>label{
+    width: 45%;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+#update_password>div>input, #formular>form>div>input{
+    width: 55%;
+    text-align: center;
+}
+
+#contact>div>label{
+    width: 25%;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+#contact>div>input, #contact>div>textarea{
+    width: 75%;
+    text-align: center;
+}
+
+.data{
+    width: 80%;
+    text-align: center;
+}
+
+svg {
+    cursor: pointer;
+    display: none;
+    margin-left: auto;
+}
+
+main {
+    max-width: 100%;
+    margin: 5.625rem auto 0;
+    flex: 1;
+}
+
+.tlacitko, #update_password_submit, #contact_submit, .btn {
+    font-size: var(--pismo-8);
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--barva-pisma-sekundarni);
+    background-color: var(--pozadi-tlacitek);
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    -webkit-transition-property: background;
+	transition-property: background;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+button.tlacitko, #contact_submit, #update_password_submit, .btn{
+    background-color: var(--pozadi-tlacitek-seda);
+}
+a.tlacitko:hover:not(.active) {
+	background-color: #AA0B0B;
+}
+
+a.tlacitko:hover.active {
+	background-color: #AA0B0B;
+}
+
+button.tlacitko:hover:not(.active), .btn:hover:not(.active), #contact_submit:hover:not(.active), #update_password_submit:hover:not(.active) {
+	background-color: #0baa13;
+}
+
+button.tlacitko:hover.active, .btn:hover.active, #contact_submit:hover.active, #update_password_submit:hover.active {
+	background-color: #0baa13;
+}
+
+.obsah {
+    width: var(--sirka-stranky);
+    margin: var(--mezera-6) auto 0 auto;
+}
+
+.vycentrovat {
+    text-align: center;
+}
+
+.nahledy_obrazky {
+    width: var(--sirka-nahledu);
+}
+
+.prispevek {
+    width: var(--sirka-prispevku);
+    margin: var(--mezera-6) auto 0 auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    label{
+        margin-top: var(--mezera-7);
+        margin-bottom: var(--mezera-4);
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+    }
+    input {
+        border: 1px solid var(--ramecek-vstupy);
+        width: 29.75rem;
+        padding: var(--mezera-3);
+    }
+
+    input[type="submit"]{
+        border: none;
+    }
+}
+
+
+#zprava {
+    position: fixed;
+    bottom: var(--mezera-m);
+    right: var(--mezera-m) ;
+    box-shadow: 0 0 var(--mezera-4) var(--vrzeny-stin);
+    background-color: var(--pozadi-elementu);
+    margin: var(--mezera-5) var(--mezera-6);
+    padding-right: var(--mezera-7);
+    display: flex;
+    gap: var(--mezera-6);
+    font-size: var(--pismo-7);
+}
+.uspech {
+    width: var(--mezera-4);
+    background-color: var(--pozadi-uspech);
+}
+
+.chyba {
+    width: var(--mezera-4);
+    background-color: var(--pozadi-chyba);
+}
+
+p {
+    margin: var(--mezera-4) 0;
+    font-style: italic;
+}
+
+@media screen and (max-width: 964px) {
+    .prispevek {
+        width: 90%;
+        margin: var(--mezera-6) auto 0 auto;
+    }
+    .obsah {
+        width: 100%;
+        margin: var(--mezera-6) auto 0 auto;
+    }
+    .formular{
+        width: 60%;
+        margin: 0% 20%;
+    }
+}
+@media screen and (max-width: 880px) {
+    .otevrit {
+        display: block;
+    }
+    .otevrit.otevreno {
+        display: none;
+    }
+    .zavrit.otevreno {
+        display: block;
+    }
+    .odkazy {
+        position: fixed;
+        top: var(--vyska-navigace);
+        height: 100%;
+        right: -100%;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: var(--pozadi-navigace);
+        transition: right .3s ease-in-out;
+    }
+    a.menu {
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .odkazy.otevreno {
+        right: 0;
+    }
+    .formular, .kontakt{
+        width: 76%;
+        margin: 0% 12%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .prispevek {
+        width: 90%;
+        margin: var(--mezera-6) auto 0 auto;
+    }
+    .obsah {
+        width: 100%;
+        margin: var(--mezera-6) auto 0 auto;
+    }
+    .formular, .kontakt{
+        width: 90%;
+        margin: 0% 5%;
+    }
+}

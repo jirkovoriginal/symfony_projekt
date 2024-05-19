@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% include 'components/public/header.html.twig' %}
+
+<main>
+    <div class="obsah vycentrovat">
+        <h1>Reset hesla</h1>
+
+    <p>
+        Pokud emailová adresa odpovídá nějakému účtu, přijde na ni v nejbližší chvíli email s odkazem o reset hesla. Tento odkaz vyprší za {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+    </p>
+    <p>Pokud žádný email nedorazil ani po několika minutách zkontroluj složku spam nebo vyzkoušej <a href="{{ path('app_forgot_password_request') }}">poslat požadavek znovu</a>.</p>
+</main>
+
+{% include 'components/public/footer.html.twig' %}
+{% endblock %}

@@ -1,0 +1,11 @@
+<h1>Potvrzení emailu</h1>
+
+<p>
+    Prosim potvrď svůj email kliknutím na následující odkaz: <br><br>
+    <a href="{{ signedUrl|raw }}">Potvrdit email</a>.
+    Tento odkaz vyprší za {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
+</p>
+
+<p>
+    Přejeme vám hezký den.
+</p>

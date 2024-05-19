@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% include 'components/public/header.html.twig' %}
+    
+<main>
+    <div class="obsah vycentrovat">
+        <h1>Můj účet</h1>
+        <p>
+            Jméno: <b>{{ app.user.jmeno }}</b>
+            <br>
+            Email: <b>{{ app.user.email }}</b>
+        </p>
+        <h2>Změna hesla:</h2>
+        <div class="formular">
+        {{ form(update_password_form) }}
+        <div>
+        {% if is_granted('ROLE_ADMIN') %}
+            <p><a class="tlacitko" href="">Administrace</a></p>
+        {% endif %}
+
+        <p class=><a class="tlacitko" href="{{ path('app_logout') }}">Odhlásit se</a></p>
+        </div>
+    <div>
+</main>
+
+{% include 'components/public/footer.html.twig' %}
+{% endblock %}

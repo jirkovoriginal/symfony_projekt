@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% include 'components/public/header.html.twig' %}
+<main>
+    <div id="formular" class="obsah vycentrovat">
+        {% for flash_error in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+        {% endfor %}
+
+        <h1>Vytvoření nového účtu</h1>
+
+    {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.jmeno) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn">Vytvořit účet</button>
+    {{ form_end(registrationForm) }}
+    </div>
+</main>
+
+{% include 'components/public/footer.html.twig' %}
+{% endblock %}

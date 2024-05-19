@@ -1,0 +1,15 @@
+<div class="prispevek">
+    <h2>{{ prispevek.nazev }}</h2>
+    <i>{{ prispevek.datumVytvoreni|date('d. M Y') }}</i>
+    <p>{{ prispevek.obsah }}</p>
+    <div class="vycentrovat">
+    {% for i in 1..5 %}
+        {% set obrazek = attribute(prispevek, 'obrazek' ~ i) %}
+        {% if obrazek is not null %}
+            <img class="nahledy_obrazky" src="{{ asset('obrazky/' ~ obrazek) }}" alt="{{ prispevek.nazev }}">
+        {% endif %}
+    {% endfor %}
+    </div>
+</div><br>
+
+

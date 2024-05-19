@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% include 'components/public/header.html.twig' %}
+
+<main>
+    <div id="formular" class="obsah vycentrovat">
+        <h1>Reset hesla</h1>
+
+    {% for flash_error in app.flashes('reset_password_error') %}
+        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+
+    {{ form_start(requestForm) }}
+        {{ form_row(requestForm.email) }}
+        <div>
+            <small>
+                Zadejte emailovou adresu spojenou s účtem a my na ni zašleme požadavek k resetu hesla.
+            </small>
+        </div>
+
+        <button class="btn btn-primary">Odeslat email k resetu hesla</button>
+    {{ form_end(requestForm) }}
+</main>
+
+{% include 'components/public/footer.html.twig' %}
+{% endblock %}

@@ -1,0 +1,9 @@
+<h1>Žádost o reset hesla</h1>
+
+<p>Byla přijata žádost o reset hesla. Pokud jsi to byl ty pokračuj kliknutím na odkaz.</p>
+
+<a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+
+<p>Tento odkaz vyprší za {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+
+<p>Pokud si žádný požadavek neposlal tento email ignoruj.</p>

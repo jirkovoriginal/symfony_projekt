@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+    <main class="vypis-clanku main-admin">
+        <div class="nadpis-admin">
+            <h1>Příspěvky</h1>
+            <a href="{{ path('app_create_post_admin') }}" class="tlacitko">Přidat článek</a>
+        </div>
+        
+        <div id="clanky">
+         {% for prispevek in prispevky %}
+            {% include 'components/public/news.html.twig' %}
+        {% endfor %}
+        </div>
+    </main>
+{% endblock %}

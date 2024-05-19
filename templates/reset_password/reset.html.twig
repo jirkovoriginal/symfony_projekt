@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% include 'components/public/header.html.twig' %}
+<main>
+    <div id="formular" class="obsah vycentrovat">
+        <h1>Reset hesla</h1>
+
+    {{ form_start(resetForm) }}
+        {{ form_row(resetForm.plainPassword) }}
+        <button class="btn btn-primary">Reset password</button>
+    {{ form_end(resetForm) }}
+</main>
+
+{% include 'components/public/footer.html.twig' %}
+{% endblock %}

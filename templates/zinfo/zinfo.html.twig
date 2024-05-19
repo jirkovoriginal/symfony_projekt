@@ -1,0 +1,16 @@
+    {% extends 'base.html.twig' %}
+    {% block body %}
+    {% include 'components/public/header.html.twig' %}
+
+    <main>
+        <section class="obsah">
+            <header>
+                <h1>{{ zinfo.nazev }}</h1>
+                <hr>
+            </header>
+            <article>{{ zinfo.obsah|raw }}</article>
+        </section>
+    </main>
+    
+    {% include 'components/public/footer.html.twig' %}
+    {% endblock %}

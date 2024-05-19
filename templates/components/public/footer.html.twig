@@ -1,0 +1,12 @@
+
+        <footer>
+            <div class="odkazy_paticka">
+                {% for zinfo in info_pages %}
+                <a href="{{ path('app_zinfo', {odkaz: zinfo.odkaz}) }}">{{ zinfo.nazev }}</a>
+                {% endfor %}
+            </div>
+            <hr>
+            <p>
+                2024 &copy; jeste.nevim
+            </p>
+        </footer>
